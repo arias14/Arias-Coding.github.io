@@ -340,6 +340,70 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
 }
 
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10%;
+  padding: 0;
+  color: rgba(241, 241, 241, 0.5);
+  background: 0 0;
+  border: none;
+  -webkit-transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.carousel-indicators [data-bs-target] {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 2rem;
+  height: 4px;
+  border-radius: 0.6rem;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgba(241, 241, 241, 0.5);
+  background-clip: padding-box;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+
+.carousel-indicators .active,
+.carousel-control-prev .active,
+.carousel-control-next .active {
+  background-color: #F1F1F1;
+}
+
 /**************************************************************************/
 @media screen and (max-width: 1000px) {
   body {
