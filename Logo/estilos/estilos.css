@@ -224,85 +224,39 @@ body {
 }
 
 /**************************************************************************/
-.carrusel__contenedor {
+/**************************************************************************/
+.carousel {
   position: relative;
 }
-.carrusel__contenedor .botones {
-  padding-top: calc(25% + 2.5rem);
-  width: 100%;
-  position: absolute;
-  z-index: 4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.carrusel__contenedor .botones .carrusel__anterior,
-.carrusel__contenedor .botones .carrusel__siguiente {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: none;
-  cursor: pointer;
-  line-height: 2.5rem;
-  background: none;
-  color: #CFCFCF;
-  opacity: 60%;
-}
-.carrusel__contenedor .botones .carrusel__anterior:hover,
-.carrusel__contenedor .botones .carrusel__siguiente:hover {
-  opacity: 100%;
-}
-@media screen and (max-width: 850px) {
-  .carrusel__contenedor .botones {
-    padding-top: calc(25% + 5rem);
-  }
-}
-@media screen and (max-width: 680px) {
-  .carrusel__contenedor .botones {
-    padding-top: calc(25% + 7.5rem);
-  }
-}
-@media screen and (max-width: 570px) {
-  .carrusel__contenedor .botones {
-    padding-top: calc(25% + 10rem);
-  }
-}
-@media screen and (max-width: 440px) {
-  .carrusel__contenedor .botones {
-    padding-top: calc(25% + 14rem);
-  }
-}
-.carrusel__contenedor .carrusel__lista {
+.carousel .carousel-inner {
   overflow: hidden;
 }
-.carrusel__contenedor .carrusel__lista .carrusel__elemento {
+.carousel .carousel-inner .carousel-item {
   width: 100%;
   padding: 16rem 0 6rem 0;
 }
-.carrusel__contenedor .carrusel__lista .carrusel__elemento .info {
+.carousel .carousel-inner .carousel-item .info {
   width: 80%;
   margin: auto;
 }
-.carrusel__contenedor .carrusel__lista .carrusel__elemento .info .texto {
+.carousel .carousel-inner .carousel-item .info .texto {
   width: 50%;
   color: rgba(241, 241, 241, 0.9);
 }
-.carrusel__contenedor .carrusel__lista .carrusel__elemento .info .texto .titulo h2 {
+.carousel .carousel-inner .carousel-item .info .texto .titulo h2 {
   font-size: 2.5rem;
 }
-.carrusel__contenedor .carrusel__lista .carrusel__elemento .info .texto .parrafo p {
+.carousel .carousel-inner .carousel-item .info .texto .parrafo p {
   font-size: 1.15rem;
   line-height: 1.75rem;
   margin: 1.5rem 0;
 }
 @media screen and (max-width: 900px) {
-  .carrusel__contenedor .carrusel__lista .carrusel__elemento .info .texto {
+  .carousel .carousel-inner .carousel-item .info .texto {
     width: 75%;
   }
 }
-.carrusel__contenedor .carrusel__lista .carrusel__elemento .botones_ {
+.carousel .carousel-inner .carousel-item .botones_ {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,7 +268,7 @@ body {
   width: 80%;
   margin: auto;
 }
-.carrusel__contenedor .carrusel__lista .carrusel__elemento .botones_ .boton {
+.carousel .carousel-inner .carousel-item .botones_ .boton {
   background: rgba(0, 0, 0, 0.5);
   color: #F1F1F1;
   border: none;
@@ -328,44 +282,24 @@ body {
   gap: 1rem;
   padding: 1rem 1.8rem;
 }
-.carrusel__contenedor .carrusel__lista .carrusel__elemento .botones_ .boton:hover {
+.carousel .carousel-inner .carousel-item .botones_ .boton:hover {
   background: rgba(241, 241, 241, 0.75);
   color: #1E212D;
 }
-.carrusel__contenedor .carrusel__lista .anabelle {
+.carousel .carousel-inner .anabelle {
   background: -webkit-gradient(linear, left top, right top, from(#00000067), to(#43434363)), url(../img/expediente-warren.jpg) no-repeat center center fixed;
   background: linear-gradient(to right, #00000067, #43434363), url(../img/expediente-warren.jpg) no-repeat center center fixed;
   background-size: cover;
 }
-.carrusel__contenedor .carrusel__lista .space-jam {
+.carousel .carousel-inner .space-jam {
   background: -webkit-gradient(linear, left top, right top, from(#00000067), to(#43434363)), url(../img/slider1.jpg) no-repeat center center fixed;
   background: linear-gradient(to right, #00000067, #43434363), url(../img/slider1.jpg) no-repeat center center fixed;
   background-size: cover;
 }
-.carrusel__contenedor .carrusel__lista .slider2 {
+.carousel .carousel-inner .slider2 {
   background: -webkit-gradient(linear, left top, right top, from(#00000067), to(#43434363)), url(../img/slider2.jpg) no-repeat center center fixed;
   background: linear-gradient(to right, #00000067, #43434363), url(../img/slider2.jpg) no-repeat center center fixed;
   background-size: cover;
-}
-.carrusel__contenedor .carrusel__lista .slider3 {
-  background: -webkit-gradient(linear, left top, right top, from(#00000067), to(#43434363)), url(../img/slider3.jpg) no-repeat center center fixed;
-  background: linear-gradient(to right, #00000067, #43434363), url(../img/slider3.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-
-.glider-dot {
-  display: block;
-  cursor: pointer;
-  color: #F1F1F1;
-  border-radius: 0.75rem;
-  background: #F1F1F1;
-  width: 1.75rem;
-  height: 5px;
-  margin-top: 0.8rem;
-}
-
-.glider-dot.active {
-  background: red;
 }
 
 /**************************************************************************/
@@ -388,6 +322,12 @@ body {
 @media screen and (max-width: 500px) {
   body {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .peliculas2 .peliculas__contenedor {
+    -ms-grid-columns: 1fr 1.5rem 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 432px) {
