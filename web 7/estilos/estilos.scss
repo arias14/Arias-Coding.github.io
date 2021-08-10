@@ -1,0 +1,135 @@
+$celeste: #6E85B2;
+$morado: #261C2C;
+$blanco: #F1F1F1;
+$negro: #1B1A17;
+$gris: #E6E6E6;
+@mixin info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: $blanco;
+    font-size: 14px;
+    color: $negro;
+}
+.contenedor {
+    width: 90%;
+    margin: auto;
+    max-width: 1300px;
+}
+
+/*************************************************************************************/
+
+nav{
+    background: rgba($morado, 0.65);
+    color: $blanco;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+
+        .logo {
+            p {
+                font-size: 1.4rem;
+            }
+        }
+        .menu {
+            display: flex;
+            gap: 0.75rem;
+
+            a {
+                font-size: 1rem;
+                text-decoration: none;
+                color: $blanco;
+            }
+        }
+    }
+}
+
+/*************************************************************************************/
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #00000067, #43434363), url(../img/foto1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*************************************************************************************/
+
+section {
+    width: 100%;
+
+    .contenedor {
+        padding: 4rem 0;
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: row column;
+        flex-wrap: wrap;
+        
+        .elemento {
+            flex: 1;
+            border: 1px solid $morado;
+            border-radius: 1.15rem;
+            padding: 1.2rem;
+            min-width: 335px;
+            box-shadow: 6px 6px 9px 2px rgba(0,0,0,0.5);
+
+            .info {
+                @include info;
+
+                h2 {
+                    font-size: 1.3rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/*************************************************************************************/
+
+.galeria {
+    .contenedor {
+        padding: 4rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2;
+        gap: 0.65rem;
+
+        .foto {
+            height: 25rem;
+        }
+        .foto1 {
+            background: url(../img/foto2.jpg) no-repeat center center;
+            background-size: cover;
+        }
+        .foto2 {
+            background: url(../img/foto3.jpg) no-repeat center center;
+            background-size: cover;
+        }
+        .foto3 {
+            background: url(../img/foto4.jpg) no-repeat center center;
+            background-size: cover;
+        }
+        .foto4 {
+            background: url(../img/foto5.jpg) no-repeat center center;
+            background-size: cover;
+        }
+    }
+}
