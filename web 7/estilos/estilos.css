@@ -60,7 +60,7 @@ nav .contenedor .menu a:hover {
 /*************************************************************************************/
 header {
   width: 100%;
-  background: #F1F9F9;
+  background: #E7E6E1;
   background: -webkit-gradient(linear, righ, from(#EEEEEE), to(#E1E8EB));
   background: linear-gradient(to righ, #EEEEEE, #E1E8EB);
 }
@@ -135,9 +135,15 @@ header .contenedor .foto {
       -ms-flex: 1;
           flex: 1;
   min-width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 header .contenedor .foto img {
-  width: 100%;
+  width: 88%;
 }
 @media screen and (max-width: 455px) {
   header .contenedor .foto {
@@ -169,13 +175,12 @@ section .contenedor .elemento {
   border-radius: 0.75rem;
   padding: 1.2rem;
   min-width: 335px;
-  background: #F1F9F9;
   -webkit-box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.4);
           box-shadow: 6px 6px 9px 2px rgba(0, 0, 0, 0.4);
 }
 section .contenedor .elemento .img {
   width: 100%;
-  border-bottom: 1px solid #A03C78;
+  border-bottom: 2px solid #A03C78;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,7 +279,7 @@ section .contenedor .elemento .abajo a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
-  background: #F1F9F9;
+  background: #E7E6E1;
   padding: 3rem 3rem 1.5rem 3rem;
   position: relative;
   min-width: 400px;
