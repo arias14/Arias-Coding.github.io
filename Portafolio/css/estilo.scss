@@ -1,6 +1,19 @@
 $azul: #2940D3;
 $negro: #1B2021;
 $blanco: #EDEEF7;
+@mixin texto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    h2 {
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+}
 
 *,
 *::before,
@@ -34,7 +47,7 @@ body {
     margin: auto;
     max-width: 1400px;
 }
-
+ 
 /*************************************************/
 
 header {
@@ -147,10 +160,8 @@ header {
     .sobre__texto {
         width: 75%;
         margin: auto;
+        @include texto;
 
-        .sobre__titulo h2 {
-            font-size: 1.8rem;
-        }
         p {
             font-size: 1.3rem;
             line-height: 1.8rem;
@@ -169,14 +180,7 @@ header {
     .conocimientos__texto {
         flex: 1;
         min-width: 300px;
-
-        h2 {
-            font-size: 1.6rem;
-        }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6rem;
-        }
+        @include texto;
     }
 }
 
@@ -191,6 +195,7 @@ header {
     .proyectos__texto {
         flex: 2;
         min-width: 270px;
+        @include texto;
     }
     .proyectos_ {
         flex: 3;
@@ -211,16 +216,36 @@ header {
                 display: flex;
                 flex-direction: column;
                 gap: 0.25rem;
+                @include texto;
 
-                h2 {
-                    font-size: 1.6rem;
+                h3 {
+                    font-size: 1.45rem;
                 }
-                .proyecto__titulo h3 {
-                        font-size: 1.45rem;
-                }
-                .proyecto__parrafo p {
+                p {
                     font-size: 1.2rem;
-                    line-height: 1.6rem;
+                    line-height: 1.5rem;
+                }
+                .botones{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    padding-top: 1rem;
+
+                    .ver,
+                    .github {
+                        padding: 0.6rem 1rem;
+                        color: $blanco;
+                        text-decoration: none;
+                        background: #0a1931ec;
+                        border-radius: 1rem;
+                        font-size: 1.2rem;
+                        transition:  all 0.4s ease;
+
+                        &:hover {
+                            background: $azul;
+                        }
+                    }
                 }
             }
         }

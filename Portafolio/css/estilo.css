@@ -152,9 +152,21 @@ header .header .contenedor .header__texto .header__parrafo p {
 .sobre .contenedor .sobre__texto {
   width: 75%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
 }
-.sobre .contenedor .sobre__texto .sobre__titulo h2 {
-  font-size: 1.8rem;
+.sobre .contenedor .sobre__texto h2 {
+  font-size: 1.6rem;
+}
+.sobre .contenedor .sobre__texto p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 .sobre .contenedor .sobre__texto p {
   font-size: 1.3rem;
@@ -178,6 +190,14 @@ header .header .contenedor .header__texto .header__parrafo p {
       -ms-flex: 1;
           flex: 1;
   min-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
 }
 .conocimientos .contenedor .conocimientos__texto h2 {
   font-size: 1.6rem;
@@ -204,6 +224,21 @@ header .header .contenedor .header__texto .header__parrafo p {
       -ms-flex: 2;
           flex: 2;
   min-width: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+.proyectos .contenedor .proyectos__texto h2 {
+  font-size: 1.6rem;
+}
+.proyectos .contenedor .proyectos__texto p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 .proyectos .contenedor .proyectos_ {
   -webkit-box-flex: 3;
@@ -238,16 +273,49 @@ header .header .contenedor .header__texto .header__parrafo p {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 .proyectos .contenedor .proyectos_ .proyecto .proyecto__texto h2 {
   font-size: 1.6rem;
 }
-.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto .proyecto__titulo h3 {
-  font-size: 1.45rem;
-}
-.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto .proyecto__parrafo p {
+.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto p {
   font-size: 1.2rem;
   line-height: 1.6rem;
+}
+.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto h3 {
+  font-size: 1.45rem;
+}
+.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto .botones {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto .botones .ver,
+.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto .botones .github {
+  padding: 0.6rem 1rem;
+  color: #EDEEF7;
+  text-decoration: none;
+  background: #0a1931ec;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto .botones .ver:hover,
+.proyectos .contenedor .proyectos_ .proyecto .proyecto__texto .botones .github:hover {
+  background: #2940D3;
 }
 
 /*************************************************/
