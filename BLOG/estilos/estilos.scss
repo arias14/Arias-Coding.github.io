@@ -103,6 +103,15 @@ header {
                 line-height: 1.35em;
             } 
 
+            @media screen and (max-width: 530px) {
+                padding: 0 2rem 0rem 2rem;
+                h1 {
+                    font-size: 1.5rem;
+                }
+                p {
+                    font-size: 1.15rem;
+                }
+            }
             @media screen and (max-width: 455px) {
                 min-width: 250px;
             }
@@ -311,5 +320,10 @@ section {
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;
+    }
+}
+@media screen and (max-width: 490px) {
+    body {
+        font-size: 13px;
     }
 }
