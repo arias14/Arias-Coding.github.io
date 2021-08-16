@@ -149,9 +149,19 @@ header .contenedor .contenido .foto {
     min-width: 260px;
   }
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 654px) {
   header .contenedor .contenido {
-    min-width: 260px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1;
+    grid-template-columns: 1;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    gap: 0;
+  }
+  header .contenedor .contenido > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
   }
 }
 

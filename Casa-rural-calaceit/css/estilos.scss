@@ -129,7 +129,6 @@ header {
                 flex: 1;
                 min-width: 350px;
                 height: 25rem;
-
                 background: url(../img/foto3.jpg) no-repeat center center;
                 background-size: cover;
 
@@ -141,9 +140,12 @@ header {
                 }
             }
 
-            @media screen and (max-width: 340px) {
-                min-width: 260px;
-            }
+            @media screen and (max-width: 654px) {
+                display: grid;
+                grid-template-columns: 1;
+                grid-template-rows: auto;
+                gap: 0;
+            }            
         }
     }
 }
