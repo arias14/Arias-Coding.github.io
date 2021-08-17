@@ -11,12 +11,14 @@ body {
   background: #EEEEEE;
   color: #231E23;
   font-size: 16px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
 body::-webkit-scrollbar {
   width: 0.8rem;
   background-color: #F0F0E4;
 }
+
 body::-webkit-scrollbar-thumb {
   background-color: #DB5F29;
 }
@@ -32,6 +34,7 @@ nav .arriba {
   background: #DB5F29;
   color: #EEEEEE;
 }
+
 nav .arriba .contenedor {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,16 +47,20 @@ nav .arriba .contenedor {
           align-items: center;
   padding: 0.9rem 0;
   gap: 1.2rem;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+
 nav .arriba .contenedor h2 {
   font-size: 1.4rem;
 }
+
 nav .arriba .contenedor p {
   font-size: 1.1rem;
   text-align: right;
 }
+
 @media screen and (max-width: 415px) {
   nav .arriba .contenedor {
     -webkit-box-orient: vertical;
@@ -67,9 +74,11 @@ nav .arriba .contenedor p {
 /***********************************************************************************/
 .abajo {
   background: #7B3C3C;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+
 .abajo .contenedor .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,10 +88,12 @@ nav .arriba .contenedor p {
           justify-content: space-between;
   padding: 0.8rem 0;
 }
+
 .abajo .contenedor .menu a {
   color: #EEEEEE;
   text-decoration: none;
 }
+
 .abajo .contenedor .menu a:hover {
   color: #DB5F29;
 }
@@ -92,44 +103,44 @@ header {
   background: #F0F0E4;
   color: #231E23;
 }
+
 header .contenedor {
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 90vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 0rem;
 }
+
 header .contenedor .info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  gap: 0;
+  min-width: 220px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  min-width: 220px;
 }
+
 header .contenedor .info .p {
   display: block;
   font-size: 1.4rem;
   font-weight: 400;
 }
+
 header .contenedor .info .h1 {
   font-size: 2.2rem;
 }
+
 @media screen and (max-width: 340px) {
   header .contenedor .info {
     min-width: 150px;
   }
 }
+
 header .contenedor .foto {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -139,20 +150,32 @@ header .contenedor .foto {
   background: url(../img/foto3.jpg) no-repeat center center;
   background-size: cover;
 }
+
 @media screen and (max-width: 560px) {
   header .contenedor .foto {
     min-width: 300px;
   }
 }
+
 @media screen and (max-width: 340px) {
   header .contenedor .foto {
     min-width: 260px;
   }
 }
-@media screen and (max-width: 654px) {
+
+@media screen and (max-width: 633px) {
   header .contenedor {
-    min-height: auto;
-    padding: 2rem 0;
+    position: relative;
+  }
+  header .contenedor .info {
+    position: absolute;
+    top: calc(25% - 8rem);
+  }
+}
+
+@media screen and (max-width: 394px) {
+  header .contenedor .foto {
+    margin-top: 5rem;
   }
 }
 
@@ -160,6 +183,7 @@ header .contenedor .foto {
 section {
   margin: 4rem 0;
 }
+
 section .contenedor .elementos .elemento {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,6 +192,7 @@ section .contenedor .elementos .elemento {
       flex-wrap: wrap;
   background: #F0F0E4;
 }
+
 section .contenedor .elementos .elemento .info {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -183,18 +208,22 @@ section .contenedor .elementos .elemento .info {
   gap: 1rem;
   min-width: 32rem;
 }
+
 section .contenedor .elementos .elemento .info h2 {
   font-size: 1.8rem;
 }
+
 section .contenedor .elementos .elemento .info h3 {
   font-size: 0.9;
   font-style: italic;
   font-weight: 200;
 }
+
 section .contenedor .elementos .elemento .info p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+
 section .contenedor .elementos .elemento .info span {
   display: block;
   text-align: center;
@@ -202,16 +231,19 @@ section .contenedor .elementos .elemento .info span {
   font-size: 1.15rem;
   padding-top: 1rem;
 }
+
 @media screen and (max-width: 560px) {
   section .contenedor .elementos .elemento .info {
     min-width: 120px;
   }
 }
+
 @media screen and (max-width: 510px) {
   section .contenedor .elementos .elemento .info {
     min-width: 250px;
   }
 }
+
 section .contenedor .elementos .elemento .foto {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -229,10 +261,12 @@ section .contenedor .elementos .elemento .foto {
       -ms-flex-align: center;
           align-items: center;
 }
+
 section .contenedor .elementos .elemento .foto img {
   width: 85%;
   height: 85%;
 }
+
 @media screen and (max-width: 1066px) {
   section .contenedor .elementos .elemento .foto {
     padding: 1.5rem;
@@ -242,6 +276,7 @@ section .contenedor .elementos .elemento .foto img {
     width: 80%;
   }
 }
+
 @media screen and (max-width: 580px) {
   section .contenedor .elementos .elemento .foto {
     min-height: auto;
@@ -250,6 +285,7 @@ section .contenedor .elementos .elemento .foto img {
     width: 92%;
   }
 }
+
 @media screen and (max-width: 510px) {
   section .contenedor .elementos .elemento .foto {
     min-width: 250px;
@@ -261,6 +297,7 @@ section .contenedor .elementos .elemento .foto img {
   background: #231E23;
   color: #EEEEEE;
 }
+
 .contacto .contenedor {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,6 +307,7 @@ section .contenedor .elementos .elemento .foto img {
   gap: 1.2rem;
   padding: 1.8rem 0;
 }
+
 .contacto .contenedor .direccion,
 .contacto .contenedor .telefono,
 .contacto .contenedor .mail {
@@ -284,11 +322,13 @@ section .contenedor .elementos .elemento .foto img {
       flex-wrap: nowrap;
   gap: 0.8rem;
 }
+
 .contacto .contenedor .direccion i,
 .contacto .contenedor .telefono i,
 .contacto .contenedor .mail i {
   font-size: 1.2rem;
 }
+
 .contacto .contenedor .direccion .info,
 .contacto .contenedor .telefono .info,
 .contacto .contenedor .mail .info {
@@ -301,6 +341,7 @@ section .contenedor .elementos .elemento .foto img {
           flex-direction: column;
   gap: 0.45rem;
 }
+
 .contacto .contenedor .direccion .info p,
 .contacto .contenedor .telefono .info p,
 .contacto .contenedor .mail .info p {
@@ -312,12 +353,15 @@ footer {
   background: #231E23;
   color: #EEEEEE;
 }
+
 footer .contenedor {
   text-align: center;
   padding: 0.75rem 0;
 }
+
 footer .contenedor p {
   font-size: 1.3rem;
 }
 
 /***********************************************************************************/
+/*# sourceMappingURL=estilos.css.map */

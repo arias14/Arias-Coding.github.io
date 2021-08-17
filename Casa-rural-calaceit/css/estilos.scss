@@ -6,7 +6,6 @@ $SColor: #7B3C3C;
 @mixin info {
     display: flex;
     flex-direction: column;
-
 }
 
 *,
@@ -100,48 +99,57 @@ header {
     color: $negro;
 
     .contenedor {
-        display: flex;
         min-height: 90vh;
-        align-items: center;
+        display: flex;
         flex-wrap: wrap;
-        gap: 1.2rem;
+        align-items: center;
+        gap: 0rem;
 
         .info {
-                @include info;
-                flex: 1;
-                min-width: 220px;
+            gap: 0;
+            min-width: 220px;
+            flex: 1;
 
-                .p {
+            .p {
                     display: block;
                     font-size: 1.4rem;
                     font-weight: 400;
-                }
-                .h1 {
-                    font-size: 2.2rem;
-                }
+            }
+            .h1 {
+                font-size: 2.2rem;
+            }
 
-                @media screen and (max-width: 340px) {
-                    min-width: 150px;
-                }
+            @media screen and (max-width: 340px) {
+                min-width: 150px;
+            }
         }
         .foto {
-                flex: 1;
-                min-width: 350px;
-                height: 25rem;
-                background: url(../img/foto3.jpg) no-repeat center center;
-                background-size: cover;
+            flex: 1;
+            min-width: 350px;
+            height: 25rem;
+            background: url(../img/foto3.jpg) no-repeat center center;
+            background-size: cover;
 
-                @media screen and (max-width: 560px) {
-                    min-width: 300px;
-                }
-                @media screen and (max-width: 340px) {
-                    min-width: 260px;
-                }
+            @media screen and (max-width: 560px) {
+                min-width: 300px;
+            }
+            @media screen and (max-width: 340px) {
+                min-width: 260px;
+            }
+        }  
+
+        @media screen and (max-width: 633px) {
+            position: relative;
+
+            .info {
+                position: absolute;
+                top: calc(25% - 8rem);
+            }
         }
-
-        @media screen and (max-width: 654px) {
-            min-height: auto;
-            padding: 2rem 0;
+        @media screen and (max-width: 394px) {
+            .foto {
+                margin-top: 5rem;
+            }
         }
     }
 }
