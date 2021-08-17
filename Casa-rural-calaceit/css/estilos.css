@@ -105,24 +105,41 @@ header {
 }
 
 header .contenedor {
-  min-height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 4rem 0;
+  /*
+        @media screen and (max-width: 633px) {
+            min-height: auto;
+            padding: 2.6rem 0;
+            gap: 0;
+        }
+        
+        
+            flex: 1;
+            min-width: 350px;
+            
+            @media screen and (max-width: 560px) {
+                min-width: 300px;
+            }
+            @media screen and (max-width: 340px) {
+                min-width: 260px;
+            }
+            min-width: 220px;
+            flex: 1;
+            */
 }
 
 header .contenedor .info {
-  gap: 0;
-  min-width: 220px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .contenedor .info .p {
@@ -151,23 +168,11 @@ header .contenedor .foto {
   background-size: cover;
 }
 
-@media screen and (max-width: 560px) {
-  header .contenedor .foto {
-    min-width: 300px;
-  }
-}
-
-@media screen and (max-width: 340px) {
-  header .contenedor .foto {
-    min-width: 260px;
-  }
-}
-
-@media screen and (max-width: 633px) {
+@media screen and (max-width: 640px) {
   header .contenedor {
-    min-height: auto;
-    padding: 2.6rem 0;
-    gap: 0;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    padding: 2.75rem 0;
   }
 }
 
@@ -356,4 +361,9 @@ footer .contenedor p {
 }
 
 /***********************************************************************************/
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
 /*# sourceMappingURL=estilos.css.map */

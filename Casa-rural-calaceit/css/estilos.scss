@@ -99,16 +99,14 @@ header {
     color: $negro;
 
     .contenedor {
-        min-height: 90vh;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 4rem 0;
 
         .info {
-            gap: 0;
-            min-width: 220px;
-            flex: 1;
+            display: flex;
+            align-items: center;
 
             .p {
                     display: block;
@@ -129,20 +127,33 @@ header {
             height: 25rem;
             background: url(../img/foto3.jpg) no-repeat center center;
             background-size: cover;
+        }  
 
+        @media screen and (max-width: 640px) {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 2.75rem 0;
+        }
+
+/*
+        @media screen and (max-width: 633px) {
+            min-height: auto;
+            padding: 2.6rem 0;
+            gap: 0;
+        }
+        
+        
+            flex: 1;
+            min-width: 350px;
+            
             @media screen and (max-width: 560px) {
                 min-width: 300px;
             }
             @media screen and (max-width: 340px) {
                 min-width: 260px;
             }
-        }  
-
-        @media screen and (max-width: 633px) {
-            min-height: auto;
-            padding: 2.6rem 0;
-            gap: 0;
-        }
+            min-width: 220px;
+            flex: 1;
+            */
     }
 }
 
@@ -283,3 +294,9 @@ footer {
 }
 
 /***********************************************************************************/
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 14px;
+    }
+}
