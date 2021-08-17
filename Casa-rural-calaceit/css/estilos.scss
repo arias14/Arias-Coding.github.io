@@ -103,7 +103,7 @@ header {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 0rem;
+        gap: 1rem;
 
         .info {
             gap: 0;
@@ -139,17 +139,9 @@ header {
         }  
 
         @media screen and (max-width: 633px) {
-            position: relative;
-
-            .info {
-                position: absolute;
-                top: calc(25% - 8rem);
-            }
-        }
-        @media screen and (max-width: 394px) {
-            .foto {
-                margin-top: 5rem;
-            }
+            min-height: auto;
+            padding: 2.6rem 0;
+            gap: 0;
         }
     }
 }
