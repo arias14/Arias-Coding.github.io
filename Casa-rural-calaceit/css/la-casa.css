@@ -105,78 +105,27 @@ nav .arriba .contenedor p {
 }
 
 /***********************************************************************************/
-header {
-  background: #F0F0E4;
+.casa {
+  padding: 4rem 0;
 }
 
-header .contenedor {
+.casa .contenedor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background: #F0F0E4;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5.45rem 0;
-  gap: 1.2;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-header .contenedor .info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 14rem;
-}
-
-header .contenedor .info .arriba {
-  font-size: 1.4rem;
-  line-height: 0.5rem;
-  font-weight: 400;
-}
-
-header .contenedor .info .abajo_ {
-  font-size: 2.2rem;
-  line-height: 2.15rem;
-}
-
-header .contenedor .foto {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background: url(../img/foto3.jpg) no-repeat center center;
-  background-size: cover;
-  height: 23rem;
-  min-width: 23rem;
-}
-
-@media screen and (max-width: 425px) {
-  header .contenedor .foto {
-    min-width: 220px;
-  }
-}
-
-/***********************************************************************************/
-section {
-  margin: 4rem 0;
-}
-
-section .contenedor .elementos .elemento {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background: #F0F0E4;
-}
-
-section .contenedor .elementos .elemento .info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.casa .contenedor .info {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,136 +133,36 @@ section .contenedor .elementos .elemento .info {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2.5rem;
-  gap: 1rem;
-  min-width: 32rem;
+  gap: 0.55rem;
 }
 
-section .contenedor .elementos .elemento .info h2 {
-  font-size: 1.8rem;
+.casa .contenedor .info h2 {
+  font-size: 1.45rem;
 }
 
-section .contenedor .elementos .elemento .info h3 {
-  font-size: 0.9;
-  font-style: italic;
-  font-weight: 200;
+.casa .contenedor .info p {
+  font-size: 1.05rem;
 }
 
-section .contenedor .elementos .elemento .info p {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-section .contenedor .elementos .elemento .info span {
-  display: block;
-  text-align: center;
-  font-style: italic;
-  font-size: 1.15rem;
-  padding-top: 1rem;
-}
-
-@media screen and (max-width: 560px) {
-  section .contenedor .elementos .elemento .info {
-    min-width: 120px;
-  }
-}
-
-@media screen and (max-width: 510px) {
-  section .contenedor .elementos .elemento .info {
-    min-width: 250px;
-  }
-}
-
-section .contenedor .elementos .elemento .foto {
+.casa .contenedor .fotos {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 100%;
-  min-height: 30rem;
-  min-width: 28rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
 }
 
-section .contenedor .elementos .elemento .foto img {
-  width: 85%;
-  height: 85%;
-}
-
-@media screen and (max-width: 1066px) {
-  section .contenedor .elementos .elemento .foto {
-    padding: 1.5rem;
-  }
-  section .contenedor .elementos .elemento .foto img {
-    height: auto;
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  section .contenedor .elementos .elemento .foto {
-    min-height: auto;
-  }
-  section .contenedor .elementos .elemento .foto img {
-    width: 92%;
-  }
-}
-
-@media screen and (max-width: 510px) {
-  section .contenedor .elementos .elemento .foto {
-    min-width: 250px;
-  }
+.casa .contenedor .fotos img {
+  width: 95%;
 }
 
 /***********************************************************************************/
-.galeria {
-  background: #F0F0E4;
-  padding: 1.2rem 0;
-  margin-bottom: 4rem;
-}
-
-.galeria .contenedor {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-.galeria .contenedor .foto {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 420px;
-  max-width: calc(50% - 0.6rem);
-}
-
-.galeria .contenedor .foto img {
+.entrada .contenedor .fotos img {
   width: 100%;
-}
-
-@media screen and (max-width: 954px) {
-  .galeria .contenedor .foto {
-    max-width: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .galeria .contenedor .foto {
-    min-width: 220px;
-  }
 }
 
 /***********************************************************************************/
 .contacto {
+  margin-top: 4rem;
   background: #231E23;
   color: #EEEEEE;
 }
@@ -389,4 +238,4 @@ footer .contenedor p {
     font-size: 14px;
   }
 }
-/*# sourceMappingURL=estilos.css.map */
+/*# sourceMappingURL=la-casa.css.map */
